@@ -5,6 +5,7 @@ let string="";
 let buttons = document.querySelectorAll(".key");
 buttons.forEach(element => {
     element.addEventListener("click",(e)=>{
+        e.stopPropagation();
         document.querySelector(".normal-sound").play()
         console.log(e.target);
         try{
